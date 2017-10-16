@@ -64,7 +64,7 @@ public class Magpie4
             int psn = findKeyword(statement, "I", 0) ;
             
             if (psn >= 0
-                   && findKeyword(statement, "me", psn) >= 0)
+                   && findKeyword(statement, "you", psn) >= 0)
                    {
                        response = transformISomethingYou(statement);
                     }
@@ -155,7 +155,7 @@ public class Magpie4
                     .length() - 1);
         }
         
-        int psnOfI = findKeyword (statement, "I ", 0);
+        int psnOfI = findKeyword (statement, "I", 0);
         int psnOfYou = findKeyword (statement, "you", psnOfI + 1);
         
         String restOfStatement = statement.substring(psnOfI + 1, psnOfYou).trim();
